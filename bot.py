@@ -4,7 +4,7 @@ import json
 from discord.ext import commands
 
 #assign bot token
-TOKEN = 'ODExMzEwMTc2NDM5MjM4NzA3.YCwVew.srWjUdZGQkOZHNh-D7J5nhxDHj4'
+TOKEN = 'insert here'
 
 #assign bot prefix
 client = commands.Bot(command_prefix = '?')
