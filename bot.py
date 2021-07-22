@@ -4,7 +4,7 @@ import json
 from discord.ext import commands
 
 #assign bot token
-TOKEN = 'insert here'
+TOKEN = ''
 
 #assign bot prefix
 client = commands.Bot(command_prefix = '?')
@@ -40,7 +40,7 @@ class BiddingCommands(commands.Cog):
 
     #add captains
     @commands.command()
-    @commands.has_role('Admin')
+    @commands.has_role('Mini Admin')
     async def addcaptain(self, ctx, player, cost:int, slots:int):
         self.captains[player] = Captain(player, cost, slots)
         await ctx.send(f'{player} is a captain with {cost} dollars and {slots} slots available.')
@@ -77,7 +77,7 @@ class BiddingCommands(commands.Cog):
 
     #end bidding
     @commands.command()
-    @commands.has_role('Admin')
+    @commands.has_role('Mini Admin')
     async def sold(self, ctx):
         if self.isbidding == True:
             captain = self.captains[str(self.topbidder)]
