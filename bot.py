@@ -87,7 +87,7 @@ class BiddingCommands(commands.Cog):
             embed=discord.Embed(color=0x4682B2)
             for key, value in self.captains.items():
                 embed.add_field(name=key, value=f'${value.Amount} \n {value.AvailableSlots} slots', inline=True)
-            embed.set_footer(text = 'wheeeeeeeeeeeeeeeeeee', icon_url = ctx.author.avatar_url)
+            embed.set_footer(text = '...', icon_url = ctx.author.avatar_url)
             await ctx.send(embed=embed)
             self.isbidding = False
         else:
